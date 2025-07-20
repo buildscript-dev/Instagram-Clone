@@ -52,7 +52,9 @@ dependencies {
     //BottomNavigationBar
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.material)
-
+    //MaterialIcons
+    implementation(libs.material3)
+    implementation(libs.androidx.material.icons.extended)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

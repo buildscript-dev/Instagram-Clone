@@ -12,7 +12,6 @@ import com.example.instagram.presentation.theme.Red
 import com.example.instagram.presentation.theme.RoyalBlue
 import com.example.instagram.presentation.theme.Yellow
 
-class InstaGradient {
     val instaGradient = Brush.linearGradient(
         colors = listOf(
             RoyalBlue,
@@ -28,8 +27,6 @@ class InstaGradient {
         )
     )
 
-
-}
 
 
 //Box(
