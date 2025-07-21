@@ -16,7 +16,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -33,6 +35,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.instagram.R
+import com.example.instagram.presentation.components.ButtonHandle
 import com.example.instagram.presentation.theme.Orange
 
 @Composable
@@ -58,19 +61,17 @@ fun HomeScreen() {
                 )
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onClick = {}) {
-                        Icon(
-                            imageVector = Icons.Default.FavoriteBorder,
-                            contentDescription = "Heart Notification"
-                        )
-                    }
 
-                    IconButton(onClick = {}) {
-                        Icon(
-                            imageVector = Icons.Default.ChatBubbleOutline,
-                            contentDescription = "Messages"
-                        )
-                    }
+                    ButtonHandle(onClicked = {},
+                        preIcon = Icons.Default.FavoriteBorder,
+                        postIcon = Icons.Default.Favorite,
+                        description = "Heart Notification")
+
+                    ButtonHandle(onClicked = {},
+                        preIcon = Icons.Default.ChatBubbleOutline,
+                        postIcon = Icons.Default.ChatBubble,
+                        description = "Message")
+
                 }
             }
         }

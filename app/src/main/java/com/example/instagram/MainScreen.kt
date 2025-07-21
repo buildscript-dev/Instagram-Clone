@@ -1,14 +1,7 @@
 package com.example.instagram
 
 
-
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBars
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,11 +26,11 @@ fun MainScreen(){
             BottomNavigationBar(navController = navController)
         }
     ){
-        innerPadding ->
+        paddingValues ->
         NavHost(
             navController = navController,
             startDestination = "Home",
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.padding(paddingValues)
         )
         {
             composable("Home") { HomeScreen() }
